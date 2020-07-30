@@ -22,6 +22,7 @@ describe 'form page' do
     expect(page).to have_content("Coupon Form")
   end
 
+page = <<-HTML
 it 'new form submits content and renders form content' do
     visit new_coupon_path
 
@@ -44,6 +45,7 @@ it 'new form submits content and renders form content' do
     expect(Coupon.last.store).to eq("Quip")
   end
 end
+HTML
 
 describe 'Show page' do
   before do
