@@ -23,28 +23,28 @@ describe 'form page' do
   end
 
 
-#it 'new form submits content and renders form content' do
-#    visit new_coupon_path
+it 'new form submits content and renders form content' do
+    visit new_coupon_path
 
-#    fill_in 'coupon[coupon_code]', with: "YAYFREE"
-#    fill_in 'coupon[store]', with: "Hobby Lobby"
+    fill_in 'coupon[coupon_code]', with: "YAYFREE"
+   fill_in 'coupon[store]', with: "Hobby Lobby"
 
-  #  click_on "Submit Coupon"
-#
-  #  expect(page).to have_content("YAYFREE")
-  #end
+    click_on "Submit Coupon"
 
-#  it 'creates a record in the database' do
-  #  visit new_coupon_path
+    expect(page).to have_content("YAYFREE")
+  end
 
-#    fill_in 'coupon[coupon_code]', with: "FREEITEM"
-  #  fill_in 'coupon[store]', with: "Quip"
+  it 'creates a record in the database' do
+    visit new_coupon_path
 
-  #  click_on "Submit Coupon"
+    fill_in 'coupon[coupon_code]', with: "FREEITEM"
+    fill_in 'coupon[store]', with: "Quip"
 
-#    expect(Coupon.last.store).to eq("Quip")
-#  end
-#end
+    click_on "Submit Coupon"
+
+    expect(Coupon.last.store).to eq("Quip")
+  end
+end
 
 
 describe 'Show page' do
@@ -74,4 +74,4 @@ describe 'linking from the index page to the show page' do
     visit coupons_path
     expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
   end
-end 
+end
