@@ -24,9 +24,6 @@ describe 'form page' do
 end
 
 
-
-
-
 describe 'Show page' do
   before do
     @coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
