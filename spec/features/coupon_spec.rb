@@ -22,30 +22,30 @@ describe 'form page' do
     expect(page).to have_content("Coupon Form")
   end
 
-page = <<-HTML
-it 'new form submits content and renders form content' do
-    visit new_coupon_path
 
-    fill_in 'coupon[coupon_code]', with: "YAYFREE"
-    fill_in 'coupon[store]', with: "Hobby Lobby"
+#it 'new form submits content and renders form content' do
+#    visit new_coupon_path
 
-    click_on "Submit Coupon"
+#    fill_in 'coupon[coupon_code]', with: "YAYFREE"
+#    fill_in 'coupon[store]', with: "Hobby Lobby"
 
-    expect(page).to have_content("YAYFREE")
-  end
+  #  click_on "Submit Coupon"
+#
+  #  expect(page).to have_content("YAYFREE")
+  #end
 
-  it 'creates a record in the database' do
-    visit new_coupon_path
+#  it 'creates a record in the database' do
+  #  visit new_coupon_path
 
-    fill_in 'coupon[coupon_code]', with: "FREEITEM"
-    fill_in 'coupon[store]', with: "Quip"
+#    fill_in 'coupon[coupon_code]', with: "FREEITEM"
+  #  fill_in 'coupon[store]', with: "Quip"
 
-    click_on "Submit Coupon"
+  #  click_on "Submit Coupon"
 
-    expect(Coupon.last.store).to eq("Quip")
-  end
-end
-HTML
+#    expect(Coupon.last.store).to eq("Quip")
+#  end
+#end
+
 
 describe 'Show page' do
   before do
