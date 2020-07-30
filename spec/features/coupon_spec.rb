@@ -21,6 +21,7 @@ describe 'form page' do
     visit new_coupon_path
     expect(page).to have_content("Coupon Form")
   end
+end 
 
 
 it 'new form submits content and renders form content' do
